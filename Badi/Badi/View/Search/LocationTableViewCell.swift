@@ -11,7 +11,7 @@ import UIKit
 class LocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var category: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

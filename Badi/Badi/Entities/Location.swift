@@ -9,7 +9,7 @@
 struct Location: Codable {
     var id: Int
     var name: String
-    var type: String
+    var kind: String
     
 //    init(from decoder: Decoder) throws {
 //        let container = try decoder.container(keyedBy: CodingKeys.self)

@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9L-6W-JSp">
-                        <rect key="frame" x="16" y="37" width="288" height="20"/>
+                        <rect key="frame" x="17" y="37" width="287" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="tWN-zt-Ncv"/>
                         </constraints>
@@ -39,15 +39,15 @@
                     <constraint firstAttribute="trailing" secondItem="EIi-pB-LWF" secondAttribute="trailing" constant="16" id="DKb-MD-Dlg"/>
                     <constraint firstItem="EIi-pB-LWF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Dda-bX-TeJ"/>
                     <constraint firstAttribute="bottom" secondItem="J9L-6W-JSp" secondAttribute="bottom" constant="10" id="Ups-tV-Xkq"/>
-                    <constraint firstItem="J9L-6W-JSp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lkh-Vw-RQF"/>
+                    <constraint firstItem="J9L-6W-JSp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="lkh-Vw-RQF"/>
                     <constraint firstItem="EIi-pB-LWF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="qy2-CU-9fI"/>
                     <constraint firstAttribute="trailing" secondItem="J9L-6W-JSp" secondAttribute="trailing" constant="16" id="r6v-ct-EjO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="name" destination="EIi-pB-LWF" id="nOF-bd-ryG"/>
-                <outlet property="tag" destination="J9L-6W-JSp" id="23e-DB-are"/>
+                <outlet property="category" destination="J9L-6W-JSp" id="gVy-Ei-y6T"/>
+                <outlet property="name" destination="EIi-pB-LWF" id="EUk-bV-ZqM"/>
             </connections>
             <point key="canvasLocation" x="144.92753623188406" y="50.558035714285715"/>
         </tableViewCell>

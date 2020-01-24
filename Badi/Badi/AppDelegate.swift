@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = SearchTableViewController()
+        let router = Router()
+        self.window?.rootViewController = router.viewController
         
         // Make this scene's window be visible.
         self.window?.makeKeyAndVisible()

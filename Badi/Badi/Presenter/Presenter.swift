@@ -16,6 +16,22 @@ class Presenter {
     }
     
     func updateLocations(locations: Array<Location>) {
-        view?.populateLocations(locations: locations)
+        view?.populate(content: locations)
+    }
+    
+    func locationSelected(id: Int) {
+        router?.pushRooms()
+    }
+    
+    func fetchRooms(id: Int) {
+        interactor?.fetchRooms(id: id)
+    }
+    
+    func updateRooms(rooms: Array<Room>) {
+        view?.populate(content: rooms)
+    }
+    
+    func roomSelected(id: Int) {
+        print("Present> room selected: " + String(id))
     }
 }

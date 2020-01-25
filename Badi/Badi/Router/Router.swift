@@ -9,15 +9,23 @@
 import UIKit
 
 class Router {
-    let viewController = SearchTableViewController()
+    let searchView = SearchTableViewController()
+//    let searchVC: SearchTableViewController?
+//    let roomsVC: RoomsTableViewController?
+    
     var presenter = Presenter()
     let interactor = Interactor()
     
     init() {
-        viewController.presenter = presenter
-        presenter.view = viewController
-        presenter.interactor = interactor
-        presenter.router = self
-        interactor.presenter = presenter
+        self.searchView.presenter = self.presenter        
+        self.presenter.view = searchView
+        self.presenter.interactor = self.interactor
+        self.presenter.router = self
+        self.interactor.presenter = self.presenter
+    }
+    
+    func pushRooms() {
+        print("push rooms")
+        //self.roomsVC.presenter = self.presenter
     }
 }

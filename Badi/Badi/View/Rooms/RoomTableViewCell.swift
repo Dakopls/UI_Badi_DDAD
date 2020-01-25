@@ -1,17 +1,17 @@
 //
-//  TableViewCell.swift
+//  RoomTableViewCell.swift
 //  Badi
 //
-//  Created by user on 20/01/2020.
+//  Created by user on 25/01/2020.
 //  Copyright © 2020 BadiGeeks. All rights reserved.
 //
 
 import UIKit
 
-class LocationTableViewCell: UITableViewCell {
+class RoomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var kind: UILabel!
+    @IBOutlet weak var price: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +21,5 @@ class LocationTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
 }

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let router = Router()
-        self.window?.rootViewController = router.viewController
+        self.window?.rootViewController = router.searchView
         
         // Make this scene's window be visible.
         self.window?.makeKeyAndVisible()

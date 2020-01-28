@@ -6,9 +6,10 @@
 //  Copyright © 2020 BadiGeeks. All rights reserved.
 //
 
-class Presenter {
+class SearchPresenter {
+    
     var view: SearchTableViewController?
-    var interactor: Interactor?
+    var interactor: SearchInteractor?
     var router: Router?
     
     func fetchLocations(input: String) {
@@ -23,15 +24,4 @@ class Presenter {
         router?.pushRooms()
     }
     
-    func fetchRooms(id: Int) {
-        interactor?.fetchRooms(id: id)
-    }
-    
-    func updateRooms(rooms: Array<Room>) {
-        view?.populate(content: rooms)
-    }
-    
-    func roomSelected(id: Int) {
-        print("Present> room selected: " + String(id))
-    }
 }

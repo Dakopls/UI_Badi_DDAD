@@ -1,15 +1,13 @@
 //
-//  Room.swift
+//  HomeInteractor.swift
 //  Badi
 //
 //  Created by user on 25/01/2020.
 //  Copyright © 2020 BadiGeeks. All rights reserved.
 //
 
-struct Room: Codable {
+class HomeInteractor {
     
-    var id: Int
-    var name: String
-    var price: Int
-
+    var presenter: HomePresenter?
+    
 }

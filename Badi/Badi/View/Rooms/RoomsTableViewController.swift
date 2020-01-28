@@ -11,7 +11,7 @@ import UIKit
 class RoomsTableViewController: UITableViewController {
 
     // MARK: - Properties
-    var presenter = Presenter()
+    var presenter = RoomsPresenter()
     private var rooms = [Room]()
     weak var cellDelegate: CellUtilsDelegate?
     

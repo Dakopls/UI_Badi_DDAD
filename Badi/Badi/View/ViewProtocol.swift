@@ -9,9 +9,13 @@
 import UIKit
 
 protocol ViewProtocol {
+    
     func populate<T> (content: Array<T>)
 }
 
+
 protocol CellUtilsDelegate: class {
+    
     func cellDidSelect<T>(_ cell: UITableViewCell, with content: T) -> Void
 }
+

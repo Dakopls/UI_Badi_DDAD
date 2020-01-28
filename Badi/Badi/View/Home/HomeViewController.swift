@@ -10,10 +10,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var presenter: Presenter?
-    
+    var presenter: HomePresenter?
     @IBAction func buttonWasPressed(_ sender: Any) {
-    
+        presenter?.searchSelected()
     }
     
     override func viewDidLoad() {

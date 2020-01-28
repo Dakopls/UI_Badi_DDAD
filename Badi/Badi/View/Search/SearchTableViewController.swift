@@ -11,7 +11,7 @@ import UIKit
 class SearchTableViewController: UITableViewController {
 
     // MARK: - Properties
-    var presenter: Presenter?
+    var presenter: SearchPresenter?
     private var locations = [Location]()
     private var searchBar: UISearchBar!
     weak var cellDelegate: CellUtilsDelegate?

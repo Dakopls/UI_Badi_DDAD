@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		5298A2E5F15CA1FC551F2875 /* Pods_Badi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC88DB736406CD25F6E5BE7 /* Pods_Badi.framework */; };
 		CE54479C23DAEE7B0054608F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54479B23DAEE7B0054608F /* Router.swift */; };
-		CE54479E23DAF0940054608F /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54479D23DAF0940054608F /* Presenter.swift */; };
+		CE54479E23DAF0940054608F /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54479D23DAF0940054608F /* SearchPresenter.swift */; };
 		CE5447A123DAF5AF0054608F /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5447A023DAF5AF0054608F /* Database.swift */; };
-		CE5447A323DAF6850054608F /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5447A223DAF6850054608F /* Interactor.swift */; };
+		CE5447A323DAF6850054608F /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5447A223DAF6850054608F /* SearchInteractor.swift */; };
 		CE73B1A823DC69CA009A8A8A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1A723DC69CA009A8A8A /* Room.swift */; };
 		CE73B1AB23DC6CCF009A8A8A /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1AA23DC6CCF009A8A8A /* RoomsTableViewController.swift */; };
 		CE73B1AD23DC7211009A8A8A /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1AC23DC7211009A8A8A /* ViewProtocol.swift */; };
@@ -19,6 +19,10 @@
 		CE73B1B523DC7B82009A8A8A /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73B1B323DC7B82009A8A8A /* RoomTableViewCell.xib */; };
 		CE73B1C123DC9AD6009A8A8A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1BF23DC9AD6009A8A8A /* HomeViewController.swift */; };
 		CE73B1C223DC9AD6009A8A8A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73B1C023DC9AD6009A8A8A /* HomeViewController.xib */; };
+		CE73B1C423DCACC7009A8A8A /* RoomsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1C323DCACC7009A8A8A /* RoomsInteractor.swift */; };
+		CE73B1C623DCADBF009A8A8A /* RoomsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1C523DCADBF009A8A8A /* RoomsPresenter.swift */; };
+		CE73B1C823DCB57F009A8A8A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1C723DCB57F009A8A8A /* HomeInteractor.swift */; };
+		CE73B1CA23DCB5DC009A8A8A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1C923DCB5DC009A8A8A /* HomePresenter.swift */; };
 		CEC4AE7223D5F02000A9CF6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4AE7123D5F02000A9CF6B /* AppDelegate.swift */; };
 		CEC4AE7B23D5F02100A9CF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC4AE7A23D5F02100A9CF6B /* Assets.xcassets */; };
 		CEC4AE7E23D5F02100A9CF6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC4AE7C23D5F02100A9CF6B /* LaunchScreen.storyboard */; };
@@ -48,9 +52,9 @@
 		94E5C499C32A4350B5EB5B0B /* Pods-Badi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badi.debug.xcconfig"; path = "Target Support Files/Pods-Badi/Pods-Badi.debug.xcconfig"; sourceTree = "<group>"; };
 		A3FAC7A8A39B0D748E5C73B1 /* Pods-BadiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadiTests.debug.xcconfig"; path = "Target Support Files/Pods-BadiTests/Pods-BadiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE54479B23DAEE7B0054608F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		CE54479D23DAF0940054608F /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		CE54479D23DAF0940054608F /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		CE5447A023DAF5AF0054608F /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		CE5447A223DAF6850054608F /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		CE5447A223DAF6850054608F /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		CE73B1A723DC69CA009A8A8A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		CE73B1AA23DC6CCF009A8A8A /* RoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
 		CE73B1AC23DC7211009A8A8A /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
@@ -58,6 +62,10 @@
 		CE73B1B323DC7B82009A8A8A /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
 		CE73B1BF23DC9AD6009A8A8A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CE73B1C023DC9AD6009A8A8A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		CE73B1C323DCACC7009A8A8A /* RoomsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsInteractor.swift; sourceTree = "<group>"; };
+		CE73B1C523DCADBF009A8A8A /* RoomsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsPresenter.swift; sourceTree = "<group>"; };
+		CE73B1C723DCB57F009A8A8A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		CE73B1C923DCB5DC009A8A8A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		CEC4AE6E23D5F02000A9CF6B /* Badi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Badi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC4AE7123D5F02000A9CF6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC4AE7A23D5F02100A9CF6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,12 +144,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		CE54479623DAEC090054608F /* Presenter */ = {
+		CE54479623DAEC090054608F /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				CE54479D23DAF0940054608F /* Presenter.swift */,
+				CE73B1C923DCB5DC009A8A8A /* HomePresenter.swift */,
+				CE54479D23DAF0940054608F /* SearchPresenter.swift */,
+				CE73B1C523DCADBF009A8A8A /* RoomsPresenter.swift */,
 			);
-			path = Presenter;
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		CE54479723DAED070054608F /* Router */ = {
@@ -204,8 +214,8 @@
 			children = (
 				CEC4AE7123D5F02000A9CF6B /* AppDelegate.swift */,
 				CE3CA96923D841EC0049CA3C /* View */,
-				CEC4AE9723D5FE9300A9CF6B /* Interactor */,
-				CE54479623DAEC090054608F /* Presenter */,
+				CEC4AE9723D5FE9300A9CF6B /* Interactors */,
+				CE54479623DAEC090054608F /* Presenters */,
 				CE54479523DAEB210054608F /* Entities */,
 				CE54479723DAED070054608F /* Router */,
 				CEC4AE9323D5F21800A9CF6B /* Supporting files */,
@@ -243,13 +253,15 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		CEC4AE9723D5FE9300A9CF6B /* Interactor */ = {
+		CEC4AE9723D5FE9300A9CF6B /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				CE73B1C723DCB57F009A8A8A /* HomeInteractor.swift */,
+				CE5447A223DAF6850054608F /* SearchInteractor.swift */,
+				CE73B1C323DCACC7009A8A8A /* RoomsInteractor.swift */,
 				CE54479F23DAF47B0054608F /* Services */,
-				CE5447A223DAF6850054608F /* Interactor.swift */,
 			);
-			path = Interactor;
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		CEC4AEA323D603FE00A9CF6B /* Utils */ = {
@@ -414,9 +426,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE73B1AB23DC6CCF009A8A8A /* RoomsTableViewController.swift in Sources */,
-				CE54479E23DAF0940054608F /* Presenter.swift in Sources */,
+				CE54479E23DAF0940054608F /* SearchPresenter.swift in Sources */,
 				CE54479C23DAEE7B0054608F /* Router.swift in Sources */,
-				CE5447A323DAF6850054608F /* Interactor.swift in Sources */,
+				CE73B1C623DCADBF009A8A8A /* RoomsPresenter.swift in Sources */,
+				CE5447A323DAF6850054608F /* SearchInteractor.swift in Sources */,
 				CE73B1AD23DC7211009A8A8A /* ViewProtocol.swift in Sources */,
 				CE73B1C123DC9AD6009A8A8A /* HomeViewController.swift in Sources */,
 				CEC4AE9E23D6014700A9CF6B /* LocationTableViewCell.swift in Sources */,
@@ -424,8 +437,11 @@
 				CEC4AEA723D604DA00A9CF6B /* String.swift in Sources */,
 				CEC4AE7223D5F02000A9CF6B /* AppDelegate.swift in Sources */,
 				CEC4AEA223D603D700A9CF6B /* Location.swift in Sources */,
+				CE73B1C423DCACC7009A8A8A /* RoomsInteractor.swift in Sources */,
 				CE73B1B423DC7B82009A8A8A /* RoomTableViewCell.swift in Sources */,
+				CE73B1CA23DCB5DC009A8A8A /* HomePresenter.swift in Sources */,
 				CEC4AE9623D5FE1900A9CF6B /* SearchTableViewController.swift in Sources */,
+				CE73B1C823DCB57F009A8A8A /* HomeInteractor.swift in Sources */,
 				CE5447A123DAF5AF0054608F /* Database.swift in Sources */,
 				CE73B1A823DC69CA009A8A8A /* Room.swift in Sources */,
 			);

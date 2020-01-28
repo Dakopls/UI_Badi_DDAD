@@ -27,4 +27,5 @@ class Database {
     func getRooms() -> Array<Room> {
         return rooms
     }
+    
 }

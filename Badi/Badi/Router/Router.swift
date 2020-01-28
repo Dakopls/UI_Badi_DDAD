@@ -9,23 +9,43 @@
 import UIKit
 
 class Router {
-    let searchView = SearchTableViewController()
-//    let searchVC: SearchTableViewController?
-//    let roomsVC: RoomsTableViewController?
     
-    var presenter = Presenter()
-    let interactor = Interactor()
+    var home = HomeViewController()
+    var search: SearchTableViewController?
+    var rooms: RoomsTableViewController?
     
     init() {
-        self.searchView.presenter = self.presenter        
-        self.presenter.view = searchView
-        self.presenter.interactor = self.interactor
-        self.presenter.router = self
-        self.interactor.presenter = self.presenter
+        let presenter = HomePresenter()
+        presenter.router = self
+        self.home.presenter = presenter
+    }
+    
+    func pushSearch() {
+        print("push search")
+        let presenter = SearchPresenter()
+        let interactor = SearchInteractor()
+        self.search = SearchTableViewController()
+        self.search?.presenter = presenter
+        self.search?.modalPresentationStyle = .fullScreen
+        presenter.view = search
+        presenter.interactor = interactor
+        presenter.router = self
+        interactor.presenter = presenter
+        home.show(self.search!, sender: self.home)
     }
     
     func pushRooms() {
         print("push rooms")
-        //self.roomsVC.presenter = self.presenter
+        let presenter = RoomsPresenter()
+        let interactor = RoomsInteractor()
+        self.rooms = RoomsTableViewController()
+        self.rooms?.presenter = presenter
+        self.rooms?.modalPresentationStyle = .fullScreen
+        presenter.view = rooms
+        presenter.interactor = interactor
+        presenter.router = self
+        interactor.presenter = presenter
+        search?.show(self.rooms!, sender: self.search)
     }
+    
 }

@@ -12,8 +12,8 @@ class RoomsPresenter {
     var interactor: RoomsInteractor?
     var router: Router?
     
-    func fetchRooms(id: Int) {
-        interactor?.fetchRooms(id: id)
+    func fetchRooms() {
+        interactor?.fetchRooms()
     }
 
     func updateRooms(rooms: Array<Room>) {

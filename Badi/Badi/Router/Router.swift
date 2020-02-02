@@ -36,7 +36,7 @@ class Router {
         home.show(self.search!, sender: self.home)
     }
     
-    func pushRooms() {
+    func pushRooms(location: Location) {
         print("Router> push rooms")
         let presenter = RoomsPresenter()
         let interactor = RoomsInteractor()
@@ -47,6 +47,7 @@ class Router {
         presenter.interactor = interactor
         presenter.router = self
         interactor.presenter = presenter
+        interactor.bounds = location.boundingbox
         search?.show(self.rooms!, sender: self.search)
     }
     

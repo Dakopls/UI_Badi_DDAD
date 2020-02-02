@@ -23,7 +23,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         self.cellDelegate = self
         tableSettings()
-        presenter?.fetchRooms(id: 1)
+        presenter?.fetchRooms()
     }
     
     // MARK: - Setups
@@ -60,7 +60,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
         
         let room = self.rooms[indexPath.row]
-        cell.name?.text = room.name
+        cell.name?.text = room.title
         cell.price?.text = String(room.price)
         cell.contentView.backgroundColor = .white
         return cell

@@ -6,21 +6,30 @@
 //  Copyright © 2020 BadiGeeks. All rights reserved.
 //
 
+import Foundation
+
 class SearchInteractor {
     
     var presenter: SearchPresenter?
     var database = Database()
-    //private let dataRetriever = URLSessionDataRetriever()
+    private let dataRetriever = URLDataRetriever()
     
     func fetchLocations(input: String) {
-        // < fake fetch
-        var locations = [Location]()
-        locations.append(Location(id: 1, name: "Gràcia", kind: "Neighbourhood"))
-        locations.append(Location(id: 2, name: "Enric Granados", kind: "Street"))
-        locations.append(Location(id: 3, name: "Granada", kind: "City"))
-        // fake fetch >
-        database.storeLocations(content: locations)
-        updateLocations()
+        let clean = input.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+        let url = "https://desolate-cove-97654.herokuapp.com/api/v1/locations?keyword="+clean
+        self.dataRetriever.retrieve(url: url, method: "GET") { (result: Result<Array<Location>, Error>) in
+            switch result {
+            case .success(let locations):
+                //el main thread és lliure ja que aquesta crida és asíncrona
+                //només restringim al main thread la actualització de la tableView
+                Thread.executeInMain {
+                    self.database.storeLocations(content: locations)
+                    self.updateLocations()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     func updateLocations() {

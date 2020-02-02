@@ -9,6 +9,7 @@
 import Foundation
 
 extension Thread {
+    
     static func executeInMain(_ block: @escaping () -> Void) {
         guard Thread.isMainThread else {
             DispatchQueue.main.async { block() }
@@ -16,4 +17,5 @@ extension Thread {
         }
         block()
     }
+    
 }

@@ -8,7 +8,7 @@
 
 class RoomsPresenter {
     
-    var view: RoomsTableViewController?
+    var view: RoomsViewController?
     var interactor: RoomsInteractor?
     var router: Router?
     
@@ -21,7 +21,11 @@ class RoomsPresenter {
     }
 
     func roomSelected(id: Int) {
-        print("Present> room selected: " + String(id))
+        router?.pushDetail()
+    }
+    
+    func backButtonPressed() {
+        router?.returnSearch()
     }
     
 }

@@ -8,7 +8,7 @@
 
 class SearchPresenter {
     
-    var view: SearchTableViewController?
+    var view: SearchViewController?
     var interactor: SearchInteractor?
     var router: Router?
     
@@ -22,6 +22,10 @@ class SearchPresenter {
     
     func locationSelected(id: Int) {
         router?.pushRooms()
+    }
+    
+    func cancelButtonPressed() {
+        router?.returnHome()
     }
     
 }

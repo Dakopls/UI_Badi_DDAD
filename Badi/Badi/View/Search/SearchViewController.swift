@@ -1,5 +1,5 @@
 //
-//  SearchTableViewController.swift
+//  SearchViewController.swift
 //  Badi
 //
 //  Created by user on 20/01/2020.
@@ -8,20 +8,24 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Properties
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     var presenter: SearchPresenter?
     private var locations = [Location]()
-    private var searchBar: UISearchBar!
     weak var cellDelegate: CellUtilsDelegate?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        cellDelegate = self
+        self.cellDelegate = self
+        self.searchBar.delegate = self
+        headerSettings()
         tableSettings()
-        searchBarSettings()
     }
     
     // MARK: - Setups
@@ -32,15 +36,12 @@ class SearchTableViewController: UITableViewController {
         self.tableView.separatorStyle = .none
     }
     
-    func searchBarSettings() {
-        self.searchBar = UISearchBar(frame: CGRect(x: 20, y: 20, width: UIScreen.main.bounds.size.width, height: 60))
-        self.tableView.tableHeaderView = self.searchBar
-        self.searchBar.placeholder = "Search Location"
-        self.searchBar.delegate = self
+    func headerSettings() {
+        self.searchBar.searchBarStyle = .minimal
     }
 
     // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         var sections = 0
         if self.locations.count > 0 {
@@ -57,11 +58,11 @@ class SearchTableViewController: UITableViewController {
         return sections
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locations.count
     }
  
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationTableViewCell", for: indexPath) as! LocationTableViewCell
         
         let location = self.locations[indexPath.row]
@@ -71,34 +72,39 @@ class SearchTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         let location = self.locations[indexPath.row]
         cellDelegate?.cellDidSelect(cell, with: location)
     }
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.presenter?.cancelButtonPressed()
+    }
+
 }
 
 // MARK: - Protocols
-extension SearchTableViewController: ViewProtocol {
+extension SearchViewController: ViewProtocol {
     func populate<T>(content: Array<T>) {
-        print("populate Locations")
         self.locations = content as! [Location]
         self.tableView.reloadData()
     }
 }
 
 // MARK: - Delegates
-extension SearchTableViewController: UISearchBarDelegate {
+extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count < 3 { return }
+        print("SearchDelegate> fetch locations")
         self.presenter?.fetchLocations(input: searchText)
     }
 }
 
-extension SearchTableViewController: CellUtilsDelegate {
+extension SearchViewController: CellUtilsDelegate {
     func cellDidSelect<T>(_ cell: UITableViewCell, with content: T) {
         let location = content as! Location
-        print("get roomList for location:" + String(location.id))
+        print("CellSelected> location: " + String(location.id))
         self.presenter?.locationSelected(id: location.id)
     }
 }

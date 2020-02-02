@@ -13,7 +13,7 @@
 		CE5447A123DAF5AF0054608F /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5447A023DAF5AF0054608F /* Database.swift */; };
 		CE5447A323DAF6850054608F /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5447A223DAF6850054608F /* SearchInteractor.swift */; };
 		CE73B1A823DC69CA009A8A8A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1A723DC69CA009A8A8A /* Room.swift */; };
-		CE73B1AB23DC6CCF009A8A8A /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1AA23DC6CCF009A8A8A /* RoomsTableViewController.swift */; };
+		CE73B1AB23DC6CCF009A8A8A /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1AA23DC6CCF009A8A8A /* RoomsViewController.swift */; };
 		CE73B1AD23DC7211009A8A8A /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1AC23DC7211009A8A8A /* ViewProtocol.swift */; };
 		CE73B1B423DC7B82009A8A8A /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73B1B223DC7B82009A8A8A /* RoomTableViewCell.swift */; };
 		CE73B1B523DC7B82009A8A8A /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE73B1B323DC7B82009A8A8A /* RoomTableViewCell.xib */; };
@@ -27,12 +27,18 @@
 		CEC4AE7B23D5F02100A9CF6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC4AE7A23D5F02100A9CF6B /* Assets.xcassets */; };
 		CEC4AE7E23D5F02100A9CF6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC4AE7C23D5F02100A9CF6B /* LaunchScreen.storyboard */; };
 		CEC4AE8923D5F02100A9CF6B /* BadiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4AE8823D5F02100A9CF6B /* BadiTests.swift */; };
-		CEC4AE9623D5FE1900A9CF6B /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4AE9523D5FE1900A9CF6B /* SearchTableViewController.swift */; };
 		CEC4AE9E23D6014700A9CF6B /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4AE9C23D6014700A9CF6B /* LocationTableViewCell.swift */; };
 		CEC4AE9F23D6014700A9CF6B /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC4AE9D23D6014700A9CF6B /* LocationTableViewCell.xib */; };
 		CEC4AEA223D603D700A9CF6B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4AEA123D603D700A9CF6B /* Location.swift */; };
 		CEC4AEA523D604CE00A9CF6B /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4AEA423D604CE00A9CF6B /* Thread.swift */; };
 		CEC4AEA723D604DA00A9CF6B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4AEA623D604DA00A9CF6B /* String.swift */; };
+		CEF11D1123E0763700457315 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D0F23E0763700457315 /* SearchViewController.swift */; };
+		CEF11D1623E0836A00457315 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D1423E0836A00457315 /* DetailViewController.swift */; };
+		CEF11D1723E0836A00457315 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF11D1523E0836A00457315 /* DetailViewController.xib */; };
+		CEF11D1923E0847500457315 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D1823E0847500457315 /* DetailInteractor.swift */; };
+		CEF11D1B23E084A800457315 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D1A23E084A800457315 /* DetailPresenter.swift */; };
+		CEF11D2623E1EB6F00457315 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF11D2523E1EB6F00457315 /* SearchViewController.xib */; };
+		CEF11D2A23E4223900457315 /* RoomsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF11D2923E4223900457315 /* RoomsViewController.xib */; };
 		ED578F05E6331E53C50BB72B /* Pods_BadiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8398162B6A4CA755401AAA4 /* Pods_BadiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +62,7 @@
 		CE5447A023DAF5AF0054608F /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CE5447A223DAF6850054608F /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		CE73B1A723DC69CA009A8A8A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		CE73B1AA23DC6CCF009A8A8A /* RoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
+		CE73B1AA23DC6CCF009A8A8A /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		CE73B1AC23DC7211009A8A8A /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		CE73B1B223DC7B82009A8A8A /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		CE73B1B323DC7B82009A8A8A /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
@@ -74,12 +80,18 @@
 		CEC4AE8423D5F02100A9CF6B /* BadiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC4AE8823D5F02100A9CF6B /* BadiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadiTests.swift; sourceTree = "<group>"; };
 		CEC4AE8A23D5F02100A9CF6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC4AE9523D5FE1900A9CF6B /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		CEC4AE9C23D6014700A9CF6B /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		CEC4AE9D23D6014700A9CF6B /* LocationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
 		CEC4AEA123D603D700A9CF6B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CEC4AEA423D604CE00A9CF6B /* Thread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		CEC4AEA623D604DA00A9CF6B /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CEF11D0F23E0763700457315 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CEF11D1423E0836A00457315 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CEF11D1523E0836A00457315 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		CEF11D1823E0847500457315 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		CEF11D1A23E084A800457315 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		CEF11D2523E1EB6F00457315 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CEF11D2923E4223900457315 /* RoomsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsViewController.xib; sourceTree = "<group>"; };
 		E8398162B6A4CA755401AAA4 /* Pods_BadiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC88DB736406CD25F6E5BE7 /* Pods_Badi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Badi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +143,7 @@
 				CE73B1BA23DC9A4A009A8A8A /* Home */,
 				CEC4AE9423D5FDB700A9CF6B /* Search */,
 				CE73B1A923DC6C57009A8A8A /* Rooms */,
+				CEF11D1323E0831200457315 /* Detail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +163,7 @@
 				CE73B1C923DCB5DC009A8A8A /* HomePresenter.swift */,
 				CE54479D23DAF0940054608F /* SearchPresenter.swift */,
 				CE73B1C523DCADBF009A8A8A /* RoomsPresenter.swift */,
+				CEF11D1A23E084A800457315 /* DetailPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -173,9 +187,9 @@
 		CE73B1A923DC6C57009A8A8A /* Rooms */ = {
 			isa = PBXGroup;
 			children = (
-				CE73B1AA23DC6CCF009A8A8A /* RoomsTableViewController.swift */,
-				CE73B1B223DC7B82009A8A8A /* RoomTableViewCell.swift */,
-				CE73B1B323DC7B82009A8A8A /* RoomTableViewCell.xib */,
+				CE73B1AA23DC6CCF009A8A8A /* RoomsViewController.swift */,
+				CEF11D2923E4223900457315 /* RoomsViewController.xib */,
+				CEF11D1D23E1ABB000457315 /* Cell */,
 			);
 			path = Rooms;
 			sourceTree = "<group>";
@@ -246,9 +260,9 @@
 		CEC4AE9423D5FDB700A9CF6B /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				CEC4AE9523D5FE1900A9CF6B /* SearchTableViewController.swift */,
-				CEC4AE9C23D6014700A9CF6B /* LocationTableViewCell.swift */,
-				CEC4AE9D23D6014700A9CF6B /* LocationTableViewCell.xib */,
+				CEF11D0F23E0763700457315 /* SearchViewController.swift */,
+				CEF11D2523E1EB6F00457315 /* SearchViewController.xib */,
+				CEF11D1C23E1AB9400457315 /* Cell */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -259,6 +273,7 @@
 				CE73B1C723DCB57F009A8A8A /* HomeInteractor.swift */,
 				CE5447A223DAF6850054608F /* SearchInteractor.swift */,
 				CE73B1C323DCACC7009A8A8A /* RoomsInteractor.swift */,
+				CEF11D1823E0847500457315 /* DetailInteractor.swift */,
 				CE54479F23DAF47B0054608F /* Services */,
 			);
 			path = Interactors;
@@ -271,6 +286,33 @@
 				CEC4AEA423D604CE00A9CF6B /* Thread.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CEF11D1323E0831200457315 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CEF11D1423E0836A00457315 /* DetailViewController.swift */,
+				CEF11D1523E0836A00457315 /* DetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CEF11D1C23E1AB9400457315 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEC4AE9C23D6014700A9CF6B /* LocationTableViewCell.swift */,
+				CEC4AE9D23D6014700A9CF6B /* LocationTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CEF11D1D23E1ABB000457315 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE73B1B223DC7B82009A8A8A /* RoomTableViewCell.swift */,
+				CE73B1B323DC7B82009A8A8A /* RoomTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,10 +399,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC4AE7E23D5F02100A9CF6B /* LaunchScreen.storyboard in Resources */,
+				CEF11D1723E0836A00457315 /* DetailViewController.xib in Resources */,
 				CEC4AE9F23D6014700A9CF6B /* LocationTableViewCell.xib in Resources */,
 				CE73B1C223DC9AD6009A8A8A /* HomeViewController.xib in Resources */,
 				CE73B1B523DC7B82009A8A8A /* RoomTableViewCell.xib in Resources */,
 				CEC4AE7B23D5F02100A9CF6B /* Assets.xcassets in Resources */,
+				CEF11D2623E1EB6F00457315 /* SearchViewController.xib in Resources */,
+				CEF11D2A23E4223900457315 /* RoomsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,23 +470,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE73B1AB23DC6CCF009A8A8A /* RoomsTableViewController.swift in Sources */,
+				CE73B1AB23DC6CCF009A8A8A /* RoomsViewController.swift in Sources */,
 				CE54479E23DAF0940054608F /* SearchPresenter.swift in Sources */,
 				CE54479C23DAEE7B0054608F /* Router.swift in Sources */,
 				CE73B1C623DCADBF009A8A8A /* RoomsPresenter.swift in Sources */,
 				CE5447A323DAF6850054608F /* SearchInteractor.swift in Sources */,
 				CE73B1AD23DC7211009A8A8A /* ViewProtocol.swift in Sources */,
 				CE73B1C123DC9AD6009A8A8A /* HomeViewController.swift in Sources */,
+				CEF11D1623E0836A00457315 /* DetailViewController.swift in Sources */,
+				CEF11D1123E0763700457315 /* SearchViewController.swift in Sources */,
 				CEC4AE9E23D6014700A9CF6B /* LocationTableViewCell.swift in Sources */,
 				CEC4AEA523D604CE00A9CF6B /* Thread.swift in Sources */,
 				CEC4AEA723D604DA00A9CF6B /* String.swift in Sources */,
 				CEC4AE7223D5F02000A9CF6B /* AppDelegate.swift in Sources */,
 				CEC4AEA223D603D700A9CF6B /* Location.swift in Sources */,
 				CE73B1C423DCACC7009A8A8A /* RoomsInteractor.swift in Sources */,
+				CEF11D1B23E084A800457315 /* DetailPresenter.swift in Sources */,
 				CE73B1B423DC7B82009A8A8A /* RoomTableViewCell.swift in Sources */,
 				CE73B1CA23DCB5DC009A8A8A /* HomePresenter.swift in Sources */,
-				CEC4AE9623D5FE1900A9CF6B /* SearchTableViewController.swift in Sources */,
 				CE73B1C823DCB57F009A8A8A /* HomeInteractor.swift in Sources */,
+				CEF11D1923E0847500457315 /* DetailInteractor.swift in Sources */,
 				CE5447A123DAF5AF0054608F /* Database.swift in Sources */,
 				CE73B1A823DC69CA009A8A8A /* Room.swift in Sources */,
 			);

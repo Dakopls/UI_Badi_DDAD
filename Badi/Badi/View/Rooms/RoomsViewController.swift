@@ -1,5 +1,5 @@
 //
-//  RoomsTableViewController.swift
+//  RoomsViewController.swift
 //  Badi
 //
 //  Created by user on 25/01/2020.
@@ -8,18 +8,22 @@
 
 import UIKit
 
-class RoomsTableViewController: UITableViewController {
+class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Properties
-    var presenter = RoomsPresenter()
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    var presenter: RoomsPresenter?
     private var rooms = [Room]()
     weak var cellDelegate: CellUtilsDelegate?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        cellDelegate = self
+        self.cellDelegate = self
         tableSettings()
+        presenter?.fetchRooms(id: 1)
     }
     
     // MARK: - Setups
@@ -31,7 +35,7 @@ class RoomsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         var sections = 0
         if self.rooms.count > 0 {
@@ -48,11 +52,11 @@ class RoomsTableViewController: UITableViewController {
         return sections
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rooms.count
     }
  
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
         
         let room = self.rooms[indexPath.row]
@@ -62,27 +66,32 @@ class RoomsTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         let room = self.rooms[indexPath.row]
         cellDelegate?.cellDidSelect(cell, with: room)
     }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.presenter?.backButtonPressed()
+    }
+    
 }
 
 // MARK: - Protocols
-extension RoomsTableViewController: ViewProtocol {
+extension RoomsViewController: ViewProtocol {
     func populate<T>(content: Array<T>) {
-        print("populate rooms")
+        print("ViewProtocol> populate rooms")
         self.rooms = content as! [Room]
         self.tableView.reloadData()
     }
 }
 
 // MARK: - Delegates
-extension RoomsTableViewController: CellUtilsDelegate {
+extension RoomsViewController: CellUtilsDelegate {
     func cellDidSelect<T>(_ cell: UITableViewCell, with content: T) {
         let room = content as! Room
-        print("selected room: " + String(room.id))
-        self.presenter.roomSelected(id: room.id)
+        print("CellSelected> room: " + String(room.id))
+        self.presenter?.roomSelected(id: room.id)
     }
 }

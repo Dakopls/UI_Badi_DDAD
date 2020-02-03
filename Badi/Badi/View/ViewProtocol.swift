@@ -10,7 +10,7 @@ import UIKit
 
 protocol ViewProtocol {
     
-    func populate<T> (content: Array<T>)
+    func populate<T> (content: T)
     
 }
 

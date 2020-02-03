@@ -86,7 +86,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 // MARK: - Protocols
 extension SearchViewController: ViewProtocol {
-    func populate<T>(content: Array<T>) {
+    func populate<T>(content: T) {
         self.locations = content as! [Location]
         self.tableView.reloadData()
     }

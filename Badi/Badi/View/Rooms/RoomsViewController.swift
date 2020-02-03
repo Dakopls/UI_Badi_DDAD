@@ -83,7 +83,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
 // MARK: - Protocols
 extension RoomsViewController: ViewProtocol {
-    func populate<T>(content: Array<T>) {
+    func populate<T>(content: T) {
         print("ViewProtocol> populate rooms")
         self.rooms = content as! [Room]
         self.tableView.reloadData()

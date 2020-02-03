@@ -53,11 +53,16 @@ class Router {
     
     func pushDetail(id: String) {
         print("Router> push detail")
-        self.detail = DetailViewController()
         let presenter = DetailPresenter()
-        presenter.router = self
+        let interactor = DetailInteractor()
+        self.detail = DetailViewController()
         self.detail?.presenter = presenter
         self.detail?.modalPresentationStyle = .fullScreen
+        presenter.view = detail
+        presenter.interactor = interactor
+        presenter.router = self
+        interactor.presenter = presenter
+        interactor.id = id
         rooms?.show(self.detail!, sender: self.rooms)
     }
     

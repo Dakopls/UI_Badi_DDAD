@@ -21,7 +21,7 @@ class RoomsInteractor {
         let min = "&min=200"
         let max = "&max=600"
         let url = "https://desolate-cove-97654.herokuapp.com/api/v1/rooms?bounds="+self.bounds!+"&page=1&size=5"+parameter+order+min+max
-        print(url)
+        //print(url)
         self.dataRetriever.retrieve(url: url, method: "GET") { (result: Result<Array<Room>, Error>) in
             switch result {
             case .success(let rooms):

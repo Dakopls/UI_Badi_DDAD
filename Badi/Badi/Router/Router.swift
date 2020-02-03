@@ -51,7 +51,7 @@ class Router {
         search?.show(self.rooms!, sender: self.search)
     }
     
-    func pushDetail() {
+    func pushDetail(id: String) {
         print("Router> push detail")
         self.detail = DetailViewController()
         let presenter = DetailPresenter()

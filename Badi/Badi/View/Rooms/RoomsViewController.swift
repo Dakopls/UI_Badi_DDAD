@@ -91,7 +91,7 @@ extension RoomsViewController: ViewProtocol {
 extension RoomsViewController: CellUtilsDelegate {
     func cellDidSelect<T>(_ cell: UITableViewCell, with content: T) {
         let room = content as! Room
-        print("CellSelected> room: " + String(room.id))
+        print("CellSelected> room: " + room.id)
         self.presenter?.roomSelected(id: room.id)
     }
 }

@@ -20,8 +20,8 @@ class RoomsPresenter {
         view?.populate(content: rooms)
     }
 
-    func roomSelected(id: Int) {
-        router?.pushDetail()
+    func roomSelected(id: String) {
+        router?.pushDetail(id: id)
     }
     
     func backButtonPressed() {

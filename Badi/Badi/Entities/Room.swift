@@ -8,7 +8,7 @@
 
 struct Room: Codable {
     
-    var id: Int
+    var id: String
     var title: String
     var price: Double
     var kind: String

@@ -24,8 +24,8 @@ struct URLDataRetriever: DataRetriever {
             do {
                 let json = try JSONDecoder().decode(T.self, from: d)
                 completionBlock(Result.success(json))
-            } catch {
-                completionBlock(Result.failure(NSError(domain: "tech.BADI_DDAD.URLDataRetriever.error", code:500, userInfo: [:])))
+            } catch let error {
+                completionBlock(Result.failure(error))
             }
         }
         task.resume()

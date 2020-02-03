@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Kingfisher
 
 class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -30,7 +31,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableSettings() {
         self.tableView.register(UINib(nibName: "RoomTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomTableViewCell")
         self.tableView.allowsSelection = true
-        self.tableView.rowHeight = 254
+        self.tableView.rowHeight = 272
         self.tableView.separatorStyle = .none
     }
 
@@ -60,8 +61,10 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
         
         let room = self.rooms[indexPath.row]
+//        cell.photo?.kf.setImage(with: room.photos[0].url_small)
         cell.name?.text = room.title
-        cell.price?.text = String(room.price)
+        cell.price?.text = room.price
+        cell.owner?.text = room.owner.display
         cell.contentView.backgroundColor = .white
         return cell
     }

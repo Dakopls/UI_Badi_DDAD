@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Badi/Entities/Owner.swift">
-   </FileRef>
-   <FileRef
       location = "group:Badi.xcodeproj">
    </FileRef>
    <FileRef

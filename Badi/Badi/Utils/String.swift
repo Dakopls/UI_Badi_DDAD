@@ -14,4 +14,9 @@ extension StringProtocol {
         return prefix(1).uppercased() + dropFirst()
     }
     
+    var getFirstWord: String {
+        let token = self.components(separatedBy: " ")
+        return String(token[0])
+    }
+    
 }

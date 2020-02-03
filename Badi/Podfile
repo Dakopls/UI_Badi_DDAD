@@ -7,7 +7,7 @@ target 'Badi' do
   use_frameworks!
 
   # Pods for Badi
-  pod 'Kingfisher'
+  # pod 'Kingfisher'
 
   target 'BadiTests' do
     inherit! :search_paths

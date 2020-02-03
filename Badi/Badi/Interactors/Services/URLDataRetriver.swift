@@ -20,7 +20,7 @@ struct URLDataRetriever: DataRetriever {
             }
             guard let d = data else { return }
             //print(d)
-            print(String(data: d, encoding: String.Encoding.utf8)!)
+            //print(String(data: d, encoding: String.Encoding.utf8)!)
             do {
                 let json = try JSONDecoder().decode(T.self, from: d)
                 completionBlock(Result.success(json))

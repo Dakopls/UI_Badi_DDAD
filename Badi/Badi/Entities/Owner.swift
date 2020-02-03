@@ -1,12 +1,12 @@
 //
-//  User.swift
+//  Owner.swift
 //  Badi
 //
 //  Created by user on 02/02/2020.
 //  Copyright © 2020 BadiGeeks. All rights reserved.
 //
 
-struct User: Codable {
+struct Owner: Codable {
     
     var name: String
     var age: Int

@@ -16,7 +16,11 @@ class RoomsInteractor {
     private let dataRetriever = URLDataRetriever()
     
     func fetchRooms() {
-        let url = "https://desolate-cove-97654.herokuapp.com/api/v1/rooms?bounds="+self.bounds!+"&page=1&size=10&sort=2"
+        let parameter = "&order_type=price"
+        let order = "&order=desc"
+        let min = "&min=200"
+        let max = "&max=600"
+        let url = "https://desolate-cove-97654.herokuapp.com/api/v1/rooms?bounds="+self.bounds!+"&page=1&size=5"+parameter+order+min+max
         print(url)
         self.dataRetriever.retrieve(url: url, method: "GET") { (result: Result<Array<Room>, Error>) in
             switch result {

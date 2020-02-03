@@ -11,9 +11,9 @@ struct Room: Codable {
     var id: String
     var title: String
     var price: Double
-    var kind: String
+    var city: String
     var photos: Array<Photo>
-    var user: User
+    var owner: Owner
     
 //    init(from decoder: Decoder) throws {
 //        let container = try decoder.container(keyedBy: CodingKeys.self)

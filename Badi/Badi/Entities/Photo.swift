@@ -9,6 +9,6 @@
 struct Photo: Codable {
     
     var position: Int
-    var url_small_photo: String
+    var url_small: String
     
 }

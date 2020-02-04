@@ -29,15 +29,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     // MARK: - Setups
+    func headerSettings() {
+        self.searchBar.searchBarStyle = .minimal
+    }
+    
     func tableSettings() {
         self.tableView.register(UINib(nibName: "LocationTableViewCell", bundle: nil), forCellReuseIdentifier: "LocationTableViewCell")
         self.tableView.allowsSelection = true
         self.tableView.rowHeight = 68
         self.tableView.separatorStyle = .none
-    }
-    
-    func headerSettings() {
-        self.searchBar.searchBarStyle = .minimal
     }
 
     // MARK: - Table view data source
@@ -66,8 +66,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationTableViewCell", for: indexPath) as! LocationTableViewCell
         
         let location = self.locations[indexPath.row]
-        cell.name?.text = location.name
-        cell.kind?.text = location.kind
+        cell.name?.text = location.display_name
+        cell.kind?.text = location.city
         cell.contentView.backgroundColor = .white
         return cell
     }
@@ -86,7 +86,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 // MARK: - Protocols
 extension SearchViewController: ViewProtocol {
-    func populate<T>(content: Array<T>) {
+    func populate<T>(content: T) {
         self.locations = content as! [Location]
         self.tableView.reloadData()
     }
@@ -96,7 +96,7 @@ extension SearchViewController: ViewProtocol {
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count < 3 { return }
-        print("SearchDelegate> fetch locations")
+//        print("SearchDelegate> fetch locations")
         self.presenter?.fetchLocations(input: searchText)
     }
 }
@@ -104,7 +104,6 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: CellUtilsDelegate {
     func cellDidSelect<T>(_ cell: UITableViewCell, with content: T) {
         let location = content as! Location
-        print("CellSelected> location: " + String(location.id))
-        self.presenter?.locationSelected(id: location.id)
+        self.presenter?.locationSelected(location: location)
     }
 }

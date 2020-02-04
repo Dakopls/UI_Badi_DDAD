@@ -20,8 +20,8 @@ class SearchPresenter {
         view?.populate(content: locations)
     }
     
-    func locationSelected(id: Int) {
-        router?.pushRooms()
+    func locationSelected(location: Location) {
+        router?.pushRooms(location: location)
     }
     
     func cancelButtonPressed() {

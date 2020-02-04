@@ -36,7 +36,7 @@ class Router {
         home.show(self.search!, sender: self.home)
     }
     
-    func pushRooms() {
+    func pushRooms(location: Location) {
         print("Router> push rooms")
         let presenter = RoomsPresenter()
         let interactor = RoomsInteractor()
@@ -47,16 +47,22 @@ class Router {
         presenter.interactor = interactor
         presenter.router = self
         interactor.presenter = presenter
+        interactor.location = location
         search?.show(self.rooms!, sender: self.search)
     }
     
-    func pushDetail() {
+    func pushDetail(id: String) {
         print("Router> push detail")
-        self.detail = DetailViewController()
         let presenter = DetailPresenter()
-        presenter.router = self
+        let interactor = DetailInteractor()
+        self.detail = DetailViewController()
         self.detail?.presenter = presenter
         self.detail?.modalPresentationStyle = .fullScreen
+        presenter.view = detail
+        presenter.interactor = interactor
+        presenter.router = self
+        interactor.presenter = presenter
+        interactor.id = id
         rooms?.show(self.detail!, sender: self.rooms)
     }
     

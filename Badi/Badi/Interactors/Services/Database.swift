@@ -11,6 +11,7 @@ import Foundation
 class Database {
     private var locations = [Location]()
     private var rooms = [Room]()
+    private var room_detail: RoomDetail?
     
     func storeLocations(content: Array<Location>) {
         locations = content
@@ -20,12 +21,20 @@ class Database {
         rooms = content
     }
     
+    func storeRoomDetail(content: RoomDetail) {
+        room_detail = content
+    }
+    
     func getLocations() -> Array<Location> {
         return locations
     }
     
     func getRooms() -> Array<Room> {
         return rooms
+    }
+    
+    func getRoomDetail() -> RoomDetail {
+        return room_detail!
     }
     
 }

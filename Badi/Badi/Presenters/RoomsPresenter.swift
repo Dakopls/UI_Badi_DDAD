@@ -12,20 +12,24 @@ class RoomsPresenter {
     var interactor: RoomsInteractor?
     var router: Router?
     
-    func fetchRooms(id: Int) {
-        interactor?.fetchRooms(id: id)
+    func fetchRooms() {
+        interactor?.fetchRooms()
     }
 
     func updateRooms(rooms: Array<Room>) {
         view?.populate(content: rooms)
     }
 
-    func roomSelected(id: Int) {
-        router?.pushDetail()
+    func roomSelected(id: String) {
+        router?.pushDetail(id: id)
     }
     
     func backButtonPressed() {
         router?.returnSearch()
+    }
+    
+    func getLocationName() -> String {
+        return (interactor?.getLocationName())!
     }
     
 }

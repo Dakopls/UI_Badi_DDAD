@@ -8,8 +8,9 @@
 
 struct Location: Codable {
     
-    var id: Int
-    var name: String
-    var kind: String
+    var boundingbox: String
+    var display_name: String
+    var city: String
+    var country: String
     
 }

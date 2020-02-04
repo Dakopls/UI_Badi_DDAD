@@ -24,7 +24,7 @@ struct RoomDetail: Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(String.self, forKey: .id)
         self.title = (try container.decode(String.self, forKey: .title)).uppercaseFirst
-        self.description = try container.decode(String.self, forKey: .description)
+        self.description = try container.decode(String.self, forKey: .description).uppercaseFirst.addFullStop
         self.price = String(Int(try container.decode(Double.self, forKey: .price)))+"€"
         self.lat = try container.decode(String.self, forKey: .lat)
         self.lng = try container.decode(String.self, forKey: .lng)

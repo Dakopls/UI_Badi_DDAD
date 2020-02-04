@@ -10,6 +10,7 @@ import UIKit
 
 class Router {
     
+    var default_transition = UIModalTransitionStyle.crossDissolve
     var home = HomeViewController()
     var search: SearchViewController?
     var rooms: RoomsViewController?
@@ -29,6 +30,7 @@ class Router {
         self.search = SearchViewController()
         self.search?.presenter = presenter
         self.search?.modalPresentationStyle = .fullScreen
+        self.search?.modalTransitionStyle = default_transition
         presenter.view = self.search
         presenter.interactor = interactor
         presenter.router = self
@@ -43,6 +45,7 @@ class Router {
         self.rooms = RoomsViewController()
         self.rooms?.presenter = presenter
         self.rooms?.modalPresentationStyle = .fullScreen
+        self.rooms?.modalTransitionStyle = default_transition
         presenter.view = rooms
         presenter.interactor = interactor
         presenter.router = self
@@ -58,6 +61,7 @@ class Router {
         self.detail = DetailViewController()
         self.detail?.presenter = presenter
         self.detail?.modalPresentationStyle = .fullScreen
+        self.detail?.modalTransitionStyle = default_transition
         presenter.view = detail
         presenter.interactor = interactor
         presenter.router = self

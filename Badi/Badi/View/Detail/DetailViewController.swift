@@ -32,10 +32,10 @@ class DetailViewController: UIViewController {
 // MARK: - Protocols
 extension DetailViewController: ViewProtocol {
     func populate<T>(content: T) {
-        print("pop detail")
         let room_detail = content as! RoomDetail
         self.name?.text = room_detail.title
         self.price?.text = room_detail.price
         self.desc?.text = room_detail.description
+        self.bio?.text = room_detail.owner.display_bio
     }
 }

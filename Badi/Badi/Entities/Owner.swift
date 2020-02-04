@@ -12,6 +12,8 @@ struct Owner: Codable {
     var age: Int
     var gender: String
     var display: String
+    var bio: String?
+    var display_bio: String
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -19,5 +21,12 @@ struct Owner: Codable {
         self.age = try container.decode(Int.self, forKey: .age)
         self.gender = try container.decode(String.self, forKey: .gender)
         self.display = name.getFirstWord.uppercaseFirst + ", " + String(age)
+        self.bio? = try (container.decode(String.self, forKey: .bio).uppercaseFirst.addFullStop)
+        if (self.bio != nil) {
+            self.display_bio = name.getFirstWord.uppercaseFirst + " tiene " + String(age) + " años. " + bio!
+        }
+        else {
+            self.display_bio = name.getFirstWord.uppercaseFirst + " tiene " + String(age) + " años."
+        }
     }
 }

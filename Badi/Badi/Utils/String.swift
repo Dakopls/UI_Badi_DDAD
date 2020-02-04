@@ -19,4 +19,11 @@ extension StringProtocol {
         return String(token[0])
     }
     
+    var addFullStop: String {
+        if (self.suffix(1) == " " || self.suffix(1) == ".") {
+            return self.dropLast() + "."
+        }
+        return self + "."
+    }
+    
 }

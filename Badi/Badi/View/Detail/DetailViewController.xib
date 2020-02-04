@@ -34,14 +34,14 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-1L-NxF">
-                            <rect key="frame" x="20" y="20" width="13" height="22"/>
+                            <rect key="frame" x="20" y="20" width="20" height="20"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="22" id="3IZ-nh-xhD"/>
-                                <constraint firstAttribute="width" constant="13" id="dET-UX-kzt"/>
+                                <constraint firstAttribute="width" constant="20" id="guZ-ww-KRV"/>
+                                <constraint firstAttribute="height" constant="20" id="nf6-MD-tYZ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" image="chevron.left" catalog="system">
+                            <state key="normal" image="arrow.left" catalog="system">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="medium" weight="medium">
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 </preferredSymbolConfiguration>
@@ -89,13 +89,13 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="4aM-am-fyl" firstAttribute="trailing" secondItem="JJi-T2-yPr" secondAttribute="trailing" constant="20" id="0v2-NC-SwQ"/>
-                        <constraint firstItem="JU4-1L-NxF" firstAttribute="leading" secondItem="4aM-am-fyl" secondAttribute="leading" constant="20" id="1Pj-8m-okV"/>
                         <constraint firstItem="4aM-am-fyl" firstAttribute="trailing" secondItem="Ni3-0y-5C1" secondAttribute="trailing" constant="20" id="2da-IQ-OaP"/>
                         <constraint firstItem="4aM-am-fyl" firstAttribute="trailing" secondItem="ZyK-W3-mqX" secondAttribute="trailing" constant="20" id="3DB-mR-DcA"/>
                         <constraint firstItem="JJi-T2-yPr" firstAttribute="top" secondItem="ZyK-W3-mqX" secondAttribute="bottom" constant="26" id="3cV-Yw-Br9"/>
                         <constraint firstItem="LDM-M9-cfV" firstAttribute="top" secondItem="JET-Si-n4m" secondAttribute="bottom" constant="8" id="3tv-SL-G3M"/>
                         <constraint firstItem="JJi-T2-yPr" firstAttribute="leading" secondItem="4aM-am-fyl" secondAttribute="leading" constant="20" id="4p1-rH-Z1j"/>
                         <constraint firstItem="vQa-tg-4NQ" firstAttribute="top" secondItem="7D1-bO-FQS" secondAttribute="bottom" constant="7.5" id="71q-yj-Yio"/>
+                        <constraint firstItem="JU4-1L-NxF" firstAttribute="top" secondItem="4aM-am-fyl" secondAttribute="top" constant="20" id="8O0-QH-NsG"/>
                         <constraint firstItem="4aM-am-fyl" firstAttribute="trailing" secondItem="vQa-tg-4NQ" secondAttribute="trailing" constant="20" id="9xB-2j-D5a"/>
                         <constraint firstItem="LDM-M9-cfV" firstAttribute="leading" secondItem="4aM-am-fyl" secondAttribute="leading" constant="20" id="G5F-8d-cV9"/>
                         <constraint firstItem="7D1-bO-FQS" firstAttribute="leading" secondItem="4aM-am-fyl" secondAttribute="leading" constant="20" id="HPz-j5-2BX"/>
@@ -104,9 +104,9 @@
                         <constraint firstItem="ZyK-W3-mqX" firstAttribute="leading" secondItem="4aM-am-fyl" secondAttribute="leading" constant="20" id="PBs-rM-MKo"/>
                         <constraint firstItem="7D1-bO-FQS" firstAttribute="top" secondItem="LDM-M9-cfV" secondAttribute="bottom" constant="8" id="W4d-yE-DIP"/>
                         <constraint firstItem="vQa-tg-4NQ" firstAttribute="leading" secondItem="4aM-am-fyl" secondAttribute="leading" constant="20" id="WC1-Cn-IiJ"/>
+                        <constraint firstItem="JU4-1L-NxF" firstAttribute="leading" secondItem="4aM-am-fyl" secondAttribute="leading" constant="20" id="X15-yw-e8e"/>
                         <constraint firstItem="JET-Si-n4m" firstAttribute="top" secondItem="4aM-am-fyl" secondAttribute="top" id="a7G-fG-51C"/>
                         <constraint firstItem="JET-Si-n4m" firstAttribute="trailing" secondItem="4aM-am-fyl" secondAttribute="trailing" id="ev5-Mf-yXC"/>
-                        <constraint firstItem="JU4-1L-NxF" firstAttribute="top" secondItem="4aM-am-fyl" secondAttribute="top" constant="20" id="ldc-Wl-Pad"/>
                         <constraint firstItem="4aM-am-fyl" firstAttribute="trailing" secondItem="7D1-bO-FQS" secondAttribute="trailing" constant="20" id="mWc-SL-09X"/>
                         <constraint firstItem="Ni3-0y-5C1" firstAttribute="leading" secondItem="4aM-am-fyl" secondAttribute="leading" constant="20" id="tDO-F2-kap"/>
                         <constraint firstItem="Ni3-0y-5C1" firstAttribute="top" secondItem="vQa-tg-4NQ" secondAttribute="bottom" constant="26" id="uP6-PY-p5X"/>
@@ -128,6 +128,6 @@
         </view>
     </objects>
     <resources>
-        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
     </resources>
 </document>

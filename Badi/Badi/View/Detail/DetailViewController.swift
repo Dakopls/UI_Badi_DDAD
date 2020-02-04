@@ -16,7 +16,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var bio: UILabel!
-
     var presenter: DetailPresenter?
     
     override func viewDidLoad() {

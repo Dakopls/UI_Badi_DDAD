@@ -28,4 +28,8 @@ class RoomsPresenter {
         router?.returnSearch()
     }
     
+    func getLocationName() -> String {
+        return (interactor?.getLocationName())!
+    }
+    
 }

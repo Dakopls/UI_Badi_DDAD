@@ -13,8 +13,10 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     // MARK: - Properties
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backButton: UIControl!
+    @IBOutlet weak var locationSearched: UILabel!
     @IBOutlet weak var tableView: UITableView!
+
     var presenter: RoomsPresenter?
     private var rooms = [Room]()
     weak var cellDelegate: CellUtilsDelegate?
@@ -23,11 +25,20 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cellDelegate = self
+        buttonSettings()
         tableSettings()
         presenter?.fetchRooms()
     }
     
     // MARK: - Setups
+    func buttonSettings() {
+        self.locationSearched.text = presenter?.getLocationName()
+        self.backButton.backgroundColor = UIColor.init(red:239/255, green:239/255, blue: 241/255, alpha: 1)
+        self.backButton.layer.cornerRadius = 8.0
+        self.backButton.tintColor = .black
+        //self.backButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 240)
+    }
+    
     func tableSettings() {
         self.tableView.register(UINib(nibName: "RoomTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomTableViewCell")
         self.tableView.allowsSelection = true
@@ -84,7 +95,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 // MARK: - Protocols
 extension RoomsViewController: ViewProtocol {
     func populate<T>(content: T) {
-        print("ViewProtocol> populate rooms")
+        //print("ViewProtocol> populate rooms")
         self.rooms = content as! [Room]
         self.tableView.reloadData()
     }
@@ -94,7 +105,7 @@ extension RoomsViewController: ViewProtocol {
 extension RoomsViewController: CellUtilsDelegate {
     func cellDidSelect<T>(_ cell: UITableViewCell, with content: T) {
         let room = content as! Room
-        print("CellSelected> room: " + room.id)
+        //print("CellSelected> room: " + room.id)
         self.presenter?.roomSelected(id: room.id)
     }
 }

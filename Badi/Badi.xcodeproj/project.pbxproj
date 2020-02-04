@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AE02089CF918FB2CF2F5EA99 /* Pods_Badi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF9D180BA8129E00D3E204E /* Pods_Badi.framework */; };
+		CE28E18F23E8CFA80027C87D /* RoomsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE28E18E23E8CFA80027C87D /* RoomsViewController.xib */; };
+		CE28E19123E8DBBC0027C87D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE28E19023E8DBBC0027C87D /* Button.swift */; };
 		CE54479C23DAEE7B0054608F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54479B23DAEE7B0054608F /* Router.swift */; };
 		CE54479E23DAF0940054608F /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54479D23DAF0940054608F /* SearchPresenter.swift */; };
 		CE5447A123DAF5AF0054608F /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5447A023DAF5AF0054608F /* Database.swift */; };
@@ -43,7 +45,6 @@
 		CEF11D1923E0847500457315 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D1823E0847500457315 /* DetailInteractor.swift */; };
 		CEF11D1B23E084A800457315 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D1A23E084A800457315 /* DetailPresenter.swift */; };
 		CEF11D2623E1EB6F00457315 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF11D2523E1EB6F00457315 /* SearchViewController.xib */; };
-		CEF11D2A23E4223900457315 /* RoomsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF11D2923E4223900457315 /* RoomsViewController.xib */; };
 		EFDFBC36BA26696CD1278382 /* Pods_BadiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9D76AE448DFEE9DAF7C28 /* Pods_BadiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		844EB62DA6C4F7E6BA632D55 /* Pods-Badi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badi.debug.xcconfig"; path = "Target Support Files/Pods-Badi/Pods-Badi.debug.xcconfig"; sourceTree = "<group>"; };
 		ABF9D180BA8129E00D3E204E /* Pods_Badi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Badi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C9D76AE448DFEE9DAF7C28 /* Pods_BadiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE28E18E23E8CFA80027C87D /* RoomsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomsViewController.xib; sourceTree = "<group>"; };
+		CE28E19023E8DBBC0027C87D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CE54479B23DAEE7B0054608F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CE54479D23DAF0940054608F /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		CE5447A023DAF5AF0054608F /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -101,7 +104,6 @@
 		CEF11D1823E0847500457315 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		CEF11D1A23E084A800457315 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		CEF11D2523E1EB6F00457315 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		CEF11D2923E4223900457315 /* RoomsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsViewController.xib; sourceTree = "<group>"; };
 		D6318277FB2BB0780B3E3E3B /* Pods-BadiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadiTests.release.xcconfig"; path = "Target Support Files/Pods-BadiTests/Pods-BadiTests.release.xcconfig"; sourceTree = "<group>"; };
 		E190F78E27B1C24322D22EDB /* Pods-Badi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badi.release.xcconfig"; path = "Target Support Files/Pods-Badi/Pods-Badi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				CE73B1AA23DC6CCF009A8A8A /* RoomsViewController.swift */,
-				CEF11D2923E4223900457315 /* RoomsViewController.xib */,
+				CE28E18E23E8CFA80027C87D /* RoomsViewController.xib */,
 				CEF11D1D23E1ABB000457315 /* Cell */,
 			);
 			path = Rooms;
@@ -299,6 +301,7 @@
 			children = (
 				CEC4AEA623D604DA00A9CF6B /* String.swift */,
 				CEC4AEA423D604CE00A9CF6B /* Thread.swift */,
+				CE28E19023E8DBBC0027C87D /* Button.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -420,7 +423,7 @@
 				CE73B1B523DC7B82009A8A8A /* RoomTableViewCell.xib in Resources */,
 				CEC4AE7B23D5F02100A9CF6B /* Assets.xcassets in Resources */,
 				CEF11D2623E1EB6F00457315 /* SearchViewController.xib in Resources */,
-				CEF11D2A23E4223900457315 /* RoomsViewController.xib in Resources */,
+				CE28E18F23E8CFA80027C87D /* RoomsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +495,7 @@
 				CE5447A323DAF6850054608F /* SearchInteractor.swift in Sources */,
 				CE73B1AD23DC7211009A8A8A /* ViewProtocol.swift in Sources */,
 				CE6C733023E73BCD00E194B4 /* DataRetriver.swift in Sources */,
+				CE28E19123E8DBBC0027C87D /* Button.swift in Sources */,
 				CE6C733423E748A800E194B4 /* Photo.swift in Sources */,
 				CE73B1C123DC9AD6009A8A8A /* HomeViewController.swift in Sources */,
 				CEF11D1623E0836A00457315 /* DetailViewController.swift in Sources */,

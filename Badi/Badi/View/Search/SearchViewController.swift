@@ -29,15 +29,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     // MARK: - Setups
+    func headerSettings() {
+        self.searchBar.searchBarStyle = .minimal
+    }
+    
     func tableSettings() {
         self.tableView.register(UINib(nibName: "LocationTableViewCell", bundle: nil), forCellReuseIdentifier: "LocationTableViewCell")
         self.tableView.allowsSelection = true
         self.tableView.rowHeight = 68
         self.tableView.separatorStyle = .none
-    }
-    
-    func headerSettings() {
-        self.searchBar.searchBarStyle = .minimal
     }
 
     // MARK: - Table view data source

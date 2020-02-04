@@ -47,7 +47,7 @@ class Router {
         presenter.interactor = interactor
         presenter.router = self
         interactor.presenter = presenter
-        interactor.bounds = location.boundingbox
+        interactor.location = location
         search?.show(self.rooms!, sender: self.search)
     }
     

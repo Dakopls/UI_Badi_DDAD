@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Kingfisher
 
 class DetailViewController: UIViewController {
 
@@ -16,10 +17,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var bio: UILabel!
+    @IBOutlet weak var map: MKMapView!
+    
     var presenter: DetailPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.scrollView.
         self.presenter?.fetchRoomDetail()
     }
     
@@ -33,6 +37,7 @@ class DetailViewController: UIViewController {
 extension DetailViewController: ViewProtocol {
     func populate<T>(content: T) {
         let room_detail = content as! RoomDetail
+        self.photo?.kf.setImage(with: URL(string: room_detail.photos[0].url_big!))
         self.name?.text = room_detail.title
         self.price?.text = room_detail.price
         self.desc?.text = room_detail.description

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Kingfisher
+import Kingfisher
 
 class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -72,7 +72,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
         
         let room = self.rooms[indexPath.row]
-//        cell.photo?.kf.setImage(with: room.photos[0].url_small)
+        cell.photo?.kf.setImage(with: URL(string: room.photos[0].url_small!))
         cell.name?.text = room.title
         cell.price?.text = room.price
         cell.owner?.text = room.owner.display

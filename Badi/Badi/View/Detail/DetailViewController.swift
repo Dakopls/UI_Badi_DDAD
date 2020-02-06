@@ -52,7 +52,6 @@ class DetailViewController: UIViewController {
     
     lazy var photo: UIImageView = {
         let photo = UIImageView()
-        photo.backgroundColor = .systemYellow
         return photo
     }()
     
@@ -81,7 +80,6 @@ class DetailViewController: UIViewController {
         label.font = UIFont(name: "verdana", size: 17)
         label.textAlignment = NSTextAlignment.left
         label.numberOfLines = 0
-        label.backgroundColor = .systemYellow
         label.sizeToFit()
         return label
     }()

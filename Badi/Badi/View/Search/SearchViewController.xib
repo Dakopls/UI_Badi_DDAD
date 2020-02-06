@@ -26,15 +26,18 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                     <subviews>
                         <searchBar contentMode="redraw" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="d6V-k0-rnM">
-                            <rect key="frame" x="20" y="0.0" width="304" height="50"/>
+                            <rect key="frame" x="20" y="0.0" width="320" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="933-AB-7OY"/>
+                            </constraints>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-NW-UGQ">
-                            <rect key="frame" x="324" y="0.0" width="90" height="50"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-NW-UGQ">
+                            <rect key="frame" x="352" y="10" width="32" height="29"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="90" id="1Q9-Dx-cMj"/>
+                                <constraint firstAttribute="width" constant="32" id="j3I-2r-mAA"/>
                             </constraints>
-                            <state key="normal" title="Cancel"/>
+                            <state key="normal" image="home"/>
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="n2N-aw-oBR"/>
                             </connections>
@@ -42,14 +45,13 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="s0R-NW-UGQ" secondAttribute="bottom" id="4SE-DJ-uOa"/>
-                        <constraint firstAttribute="bottom" secondItem="d6V-k0-rnM" secondAttribute="bottom" symbolic="YES" id="BYp-mx-F5f"/>
-                        <constraint firstItem="d6V-k0-rnM" firstAttribute="leading" secondItem="Ubc-UZ-TCb" secondAttribute="leading" constant="20" id="IaM-6R-dlJ"/>
-                        <constraint firstItem="s0R-NW-UGQ" firstAttribute="leading" secondItem="d6V-k0-rnM" secondAttribute="trailing" symbolic="YES" id="Q0M-na-c7I"/>
+                        <constraint firstItem="d6V-k0-rnM" firstAttribute="top" secondItem="Ubc-UZ-TCb" secondAttribute="top" symbolic="YES" id="Jvs-3O-Mq0"/>
                         <constraint firstAttribute="height" constant="50" id="QhJ-un-Xtp"/>
-                        <constraint firstItem="s0R-NW-UGQ" firstAttribute="top" secondItem="Ubc-UZ-TCb" secondAttribute="top" id="ZTB-5p-m1E"/>
-                        <constraint firstAttribute="trailing" secondItem="s0R-NW-UGQ" secondAttribute="trailing" id="gur-dT-j0J"/>
-                        <constraint firstItem="d6V-k0-rnM" firstAttribute="top" secondItem="Ubc-UZ-TCb" secondAttribute="top" symbolic="YES" id="sbb-Yk-hwl"/>
+                        <constraint firstItem="s0R-NW-UGQ" firstAttribute="leading" secondItem="d6V-k0-rnM" secondAttribute="trailing" constant="12" id="T6O-zN-yCw"/>
+                        <constraint firstAttribute="trailing" secondItem="s0R-NW-UGQ" secondAttribute="trailing" constant="30" id="ZuI-EY-6s8"/>
+                        <constraint firstAttribute="bottom" secondItem="s0R-NW-UGQ" secondAttribute="bottom" constant="11" id="cak-S4-9NX"/>
+                        <constraint firstItem="s0R-NW-UGQ" firstAttribute="top" secondItem="Ubc-UZ-TCb" secondAttribute="top" constant="10" id="p6b-IU-hJo"/>
+                        <constraint firstItem="d6V-k0-rnM" firstAttribute="leading" secondItem="Ubc-UZ-TCb" secondAttribute="leading" constant="20" id="xy2-de-CZE"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GdO-Wp-g8a">
@@ -72,11 +74,13 @@
                 <constraint firstItem="GdO-Wp-g8a" firstAttribute="top" secondItem="Ubc-UZ-TCb" secondAttribute="bottom" constant="8" symbolic="YES" id="PgV-gL-cHe"/>
                 <constraint firstItem="GdO-Wp-g8a" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QDY-Lh-bI0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GdO-Wp-g8a" secondAttribute="bottom" id="UQZ-yK-dgP"/>
-                <constraint firstItem="GdO-Wp-g8a" firstAttribute="top" secondItem="Ubc-UZ-TCb" secondAttribute="bottom" constant="8" symbolic="YES" id="aTv-9g-HLO"/>
                 <constraint firstItem="Ubc-UZ-TCb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ugG-8d-gIe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </view>
     </objects>
+    <resources>
+        <image name="home" width="64" height="64"/>
+    </resources>
 </document>

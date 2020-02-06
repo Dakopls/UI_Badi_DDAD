@@ -31,6 +31,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - Setups
     func headerSettings() {
         self.searchBar.searchBarStyle = .minimal
+        self.searchBar.placeholder = "Busca una ubicación..."
     }
     
     func tableSettings() {
@@ -50,7 +51,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         else {
             let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-            noDataLabel.text = "No locations available"
+            noDataLabel.text = "No hay búsquedas recientes"
             noDataLabel.textColor = UIColor.lightGray
             noDataLabel.textAlignment = .center
             self.tableView.backgroundView = noDataLabel

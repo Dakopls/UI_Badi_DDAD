@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,7 +41,6 @@
 		CEC4AEA723D604DA00A9CF6B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC4AEA623D604DA00A9CF6B /* String.swift */; };
 		CEF11D1123E0763700457315 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D0F23E0763700457315 /* SearchViewController.swift */; };
 		CEF11D1623E0836A00457315 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D1423E0836A00457315 /* DetailViewController.swift */; };
-		CEF11D1723E0836A00457315 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF11D1523E0836A00457315 /* DetailViewController.xib */; };
 		CEF11D1923E0847500457315 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D1823E0847500457315 /* DetailInteractor.swift */; };
 		CEF11D1B23E084A800457315 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF11D1A23E084A800457315 /* DetailPresenter.swift */; };
 		CEF11D2623E1EB6F00457315 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF11D2523E1EB6F00457315 /* SearchViewController.xib */; };
@@ -100,7 +99,6 @@
 		CEC4AEA623D604DA00A9CF6B /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CEF11D0F23E0763700457315 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CEF11D1423E0836A00457315 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		CEF11D1523E0836A00457315 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		CEF11D1823E0847500457315 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		CEF11D1A23E084A800457315 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		CEF11D2523E1EB6F00457315 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -310,7 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				CEF11D1423E0836A00457315 /* DetailViewController.swift */,
-				CEF11D1523E0836A00457315 /* DetailViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -418,7 +415,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC4AE7E23D5F02100A9CF6B /* LaunchScreen.storyboard in Resources */,
-				CEF11D1723E0836A00457315 /* DetailViewController.xib in Resources */,
 				CEC4AE9F23D6014700A9CF6B /* LocationTableViewCell.xib in Resources */,
 				CE73B1C223DC9AD6009A8A8A /* HomeViewController.xib in Resources */,
 				CE73B1B523DC7B82009A8A8A /* RoomTableViewCell.xib in Resources */,

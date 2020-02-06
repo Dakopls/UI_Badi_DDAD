@@ -8,6 +8,7 @@ target 'Badi' do
 
   # Pods for Badi
   pod 'Kingfisher'
+  pod 'TinyConstraints' 
 
   target 'BadiTests' do
     inherit! :search_paths

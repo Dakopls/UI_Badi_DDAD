@@ -12,8 +12,8 @@ struct RoomDetail: Codable {
     var title: String
     var description: String
     var price: String
-    var lat: String
-    var lng: String
+    var lat: Double
+    var lng: Double
     var city: String
     var room_size: Int
     var flat_size: Int
@@ -26,8 +26,8 @@ struct RoomDetail: Codable {
         self.title = (try container.decode(String.self, forKey: .title)).uppercaseFirst
         self.description = try container.decode(String.self, forKey: .description).uppercaseFirst.addFullStop
         self.price = String(Int(try container.decode(Double.self, forKey: .price)))+"€"
-        self.lat = try container.decode(String.self, forKey: .lat)
-        self.lng = try container.decode(String.self, forKey: .lng)
+        self.lat = try Double(container.decode(String.self, forKey: .lat))!
+        self.lng = try Double(container.decode(String.self, forKey: .lng))!
         self.city = (try container.decode(String.self, forKey: .city)).uppercaseFirst
         self.room_size = try container.decode(Int.self, forKey: .room_size)
         self.flat_size = try container.decode(Int.self, forKey: .flat_size)

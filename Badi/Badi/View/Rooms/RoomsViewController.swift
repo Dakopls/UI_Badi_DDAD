@@ -36,7 +36,6 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.backButton.backgroundColor = UIColor.init(red:239/255, green:239/255, blue: 241/255, alpha: 1)
         self.backButton.layer.cornerRadius = 8.0
         self.backButton.tintColor = .black
-        //self.backButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 240)
     }
     
     func tableSettings() {

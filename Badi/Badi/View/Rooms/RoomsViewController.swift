@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Kingfisher
+import Kingfisher
 
 class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -36,7 +36,6 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.backButton.backgroundColor = UIColor.init(red:239/255, green:239/255, blue: 241/255, alpha: 1)
         self.backButton.layer.cornerRadius = 8.0
         self.backButton.tintColor = .black
-        //self.backButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 240)
     }
     
     func tableSettings() {
@@ -72,7 +71,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell", for: indexPath) as! RoomTableViewCell
         
         let room = self.rooms[indexPath.row]
-//        cell.photo?.kf.setImage(with: room.photos[0].url_small)
+        cell.photo?.kf.setImage(with: URL(string: room.photos[0].url_small!))
         cell.name?.text = room.title
         cell.price?.text = room.price
         cell.owner?.text = room.owner.display
